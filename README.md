@@ -1,2 +1,5 @@
-# Andpay-SDK-iOS
-AndpaySDK iOS
+Andpay-SDK-iOS
+===================
+和付快捷支付SDK-iOS
+-------------------
+
