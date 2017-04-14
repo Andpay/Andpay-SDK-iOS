@@ -4,9 +4,9 @@ Pod::Spec.new do |s|
   s.version      = "0.0.1"
   s.summary      = "Andpay-SDK-iOS"
 
-  s.homepage     = "http://172.19.30.116:2333/oc/Andpay-SDK-iOS"
+  s.homepage     = "https://github.com/Andpay/Andpay-SDK-iOS.git"
 
-  s.license      = "MIT"
+  s.license      = "Copyright (c) 2017年 Andpay."
 
   s.author       = { "Rango" => "im_zhang@163.com" }
 
