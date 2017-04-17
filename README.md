@@ -49,7 +49,7 @@ iOS SDK 要求 iOS 7.0 及以上版本
 ```
 
 调用支付接口
-yourController是你启动支付的页面，yourToken是从你服务获取的订单支付凭证。
+${yourController}是你启动支付的页面，${yourToken}是你从服务端获取的订单支付凭证（具体参考服务端文档）。
 ```objc
 [AndpaySDK showPayViewController:${yourController} withToken:${yourToken} resultBlock:^(AndpaySDKResult *result) {
     //your codes
