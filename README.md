@@ -40,7 +40,7 @@ iOS SDK 要求 iOS 7.0 及以上版本
 ```
 代码中执行
 ```objc
-[AndpaySDK showPayViewController:self withToken:@"" resultBlock:^(AndpaySDKResult *result) {
+[AndpaySDK showPayViewController:${yourController} withToken:@"" resultBlock:^(AndpaySDKResult *result) {
     //your codes
 }];
 ```
