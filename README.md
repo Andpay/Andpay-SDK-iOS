@@ -38,13 +38,23 @@ iOS SDK 要求 iOS 7.0 及以上版本
 ```objectivec
 #import "AndpaySDK.h"
 ```
-代码中执行
+如果需要调试，设置SDK的Debug参数
 ```objc
-[AndpaySDK showPayViewController:self withToken:@"" resultBlock:^(AndpaySDKResult *result) {
+    AndpaySDKConfig *config = [[AndpaySDKConfig alloc] init];
+    [config setIsDebug:YES];
+```
+初始化SDK
+```objc
+      [AndpaySDK initConfig:config];
+```
+
+调用支付接口
+${yourController}是你启动支付的页面，${yourToken}是你从服务端获取的订单支付凭证（具体参考服务端文档）。
+```objc
+[AndpaySDK showPayViewController:${yourController} withToken:${yourToken} resultBlock:^(AndpaySDKResult *result) {
     //your codes
 }];
 ```
-
 #### 返回值
 ```objective-c
 //返回类型（成功/失败/取消）
