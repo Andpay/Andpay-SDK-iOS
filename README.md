@@ -48,11 +48,11 @@ AndpaySDKConfig *config = [[AndpaySDKConfig alloc] init];
 ```
 如果需要ApplePay，需要将ApplePay的MerchantId传入
 ```objc
-[config setMerchantId:@""];
+    [config setMerchantId:@""];
 ```
 初始化SDK
 ```objc
-      [AndpaySDK initConfig:config];
+    [AndpaySDK initConfig:config];
 ```
 
 调用支付接口
