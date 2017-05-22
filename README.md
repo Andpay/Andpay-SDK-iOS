@@ -32,16 +32,23 @@ iOS SDK 要求 iOS 7.0 及以上版本
 1. Info.plist中添加行
    Key : NSLocationWhenInUseUsageDescription
    Value : 使用快捷支付需要获您的取地理位置信息<br />![](https://github.com/Andpay/Andpay-SDK-iOS/raw/master/img/infoPlist.png)
+2. 如果需要ApplePay，则需要将Project-Capabilities->ApplePay打开<br />![](https://github.com/Andpay/Andpay-SDK-iOS/raw/master/img/applePayConfig1.png)
+   并配置entitlements中的merchant Ids字段<br />![](https://github.com/Andpay/Andpay-SDK-iOS/raw/master/img/applePayConfig2.png)
 
 #### 调用SDK
 引入头文件：
 ```objectivec
 #import "AndpaySDK.h"
+
+AndpaySDKConfig *config = [[AndpaySDKConfig alloc] init];
 ```
 如果需要调试，设置SDK的Debug参数
 ```objc
-    AndpaySDKConfig *config = [[AndpaySDKConfig alloc] init];
     [config setIsDebug:YES];
+```
+如果需要ApplePay，需要将ApplePay的MerchantId传入
+```objc
+[config setMerchantId:@""];
 ```
 初始化SDK
 ```objc

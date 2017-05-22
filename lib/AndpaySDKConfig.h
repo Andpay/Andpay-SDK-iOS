@@ -25,4 +25,6 @@ extern NSString * NSStringTitleFromAndpayPayMethod(NSString *payMethod);
 
 @property (nonatomic, strong) NSMutableArray *payMethod;
 
+@property (nonatomic, strong) NSString *merchantId;
+
 @end
