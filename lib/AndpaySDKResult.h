@@ -15,7 +15,9 @@ typedef enum {
 } Andpay_SDK_Result_TYPE;
 
 typedef enum {
+    //没有错误
     Andpay_SDK_NO_ERROR = 0,
+    //SDK系统类错误
     Andpay_SDK_Error_Code_System_Error = 1000,
     Andpay_SDK_Error_Code_Init_Fail = 1001,
     Andpay_SDK_Error_Code_Token_Error = 1002,
@@ -24,9 +26,8 @@ typedef enum {
     Andpay_SDK_Error_Code_Position_Error = 1010,
     Andpay_SDK_Error_Code_Position_System_Deny = 1011,
     Andpay_SDK_Error_Code_Position_User_Deny = 1012,
-    
+    //支付错误
     Andpay_SDK_Error_Code_Pay_Error = 1101,
-    Andpay_SDK_Error_Code_Pay_Duplicate = 1102
 } Andpay_SDK_Error_Code;
 
 @interface AndpaySDKResult : NSObject
@@ -37,13 +38,17 @@ typedef enum {
 //失败code（未失败为0，系统错误，初始化错误，token参数错误，支付错误）
 @property (nonatomic, assign) Andpay_SDK_Error_Code errorCode;
 
+//范湖错误消息
+@property (nonatomic, strong) NSString *errorMessage;
+
 //交易金额
 @property (nonatomic, strong) NSDecimalNumber *amt;
 
 //交易时间
 @property (nonatomic, strong) NSString *payTime;
 
-//交易编号
+//商家订单号
 @property (nonatomic, strong) NSString *orderId;
+
 
 @end

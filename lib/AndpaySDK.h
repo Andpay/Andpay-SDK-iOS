@@ -12,12 +12,12 @@
 
 @interface AndpaySDK : NSObject
 
-+ (void)config:(AndpaySDKConfig *)config;
++ (void)initWithConfig:(AndpaySDKConfig *)config;
 
 + (void)showPayViewController:(UIViewController *)viewController
                     withToken:(NSString *)token
                   resultBlock:(void(^)(AndpaySDKResult *result))resultBlock;
 
-+ (void)createOrder:(NSString *)amt success:(void(^)(NSString*))successBlock;
+//+ (void)createOrder:(NSString *)amt success:(void(^)(NSString*))successBlock;
 
 @end
